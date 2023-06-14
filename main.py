@@ -1,5 +1,4 @@
 import tweepy
-import requests
 import schedule
 import bbc_feeds
 import time
