@@ -6,10 +6,10 @@ import os
 # reverting back
 from config import CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET, BEARER_TOKEN
 
-client = tweepy.Client(consumer_key=os.environ('CONSUMER_KEY'),
-                    consumer_secret=os.environ('CONSUMER_SECRET'),
-                    access_token=os.environ('ACCESS_TOKEN'),
-                    access_token_secret=os.environ('ACCESS_TOKEN_SECRET'))
+client = tweepy.Client(consumer_key=os.environ['CONSUMER_KEY'],
+                    consumer_secret=os.environ['CONSUMER_SECRET'],
+                    access_token=os.environ['ACCESS_TOKEN'],
+                    access_token_secret=os.environ['ACCESS_TOKEN_SECRET'])
 
 def tweet_news():
     stories = bbc_feeds.news().all(limit=1)
